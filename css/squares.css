@@ -7,6 +7,7 @@ body{
 .square-3 {
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
 .square-1>.img>picture>img,
