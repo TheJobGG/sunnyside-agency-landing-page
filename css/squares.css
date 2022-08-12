@@ -1,0 +1,151 @@
+.square-1,
+.square-2,
+.square-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.square-1>.img>picture>img,
+.square-2>.img>picture>img,
+.img-text>picture>img {
+    width: 100vw;
+    display: block;
+}
+
+.info-text {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.info-text>h2 {
+    font-size: 2.25em;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.info-text>p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--barlow);
+    line-height: 1.5em;
+    font-size: calc(var(--font-size) - 1px);
+    margin-bottom: 20px;
+}
+
+
+.info-text>a {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.info-text>a:after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    border-radius: 10px;
+    left: -8%;
+    right: -8%;
+    bottom: -5px;
+    z-index: -1;
+
+    transition: 150ms ease-in;
+}
+
+.info-text>a.is-yellow:after {
+    background-color: hsl(50, 95%, 85%);
+
+}
+
+.info-text>a.is-pink:after {
+    background-color: hsl(11, 96%, 91%);
+}
+
+.info-text>a.is-yellow:hover::after {
+    background-color: hsl(50, 99%, 50%);
+}
+
+.info-text>a.is-pink:hover::after {
+    background-color: hsl(7, 95%, 68%);
+}
+
+
+.img-text {
+    position: relative;
+}
+
+/* .img-text:last-child {
+    translate: 0 -3px;
+} */
+
+.img-text>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    z-index: 1;
+    text-align: center;
+    padding: 5%;
+}
+
+.img-text>div>h2 {
+    font-size: 1.75em;
+    font-family: var(--fraunces);
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.img-text>div>p {
+    font-size: calc(var(--font-size) - 3px);
+    font-family: var(--barlow);
+    line-height: 1.5em;
+}
+
+.img-text>.graphic>h2,
+.img-text>.graphic>p {
+    color: var(--dark-cyan);
+}
+
+.img-text>.photo>h2,
+.img-text>.photo>p {
+    color: var(--dark-blue);
+}
+
+
+@media screen and (min-width: 600px) {
+    .square-1>div:first-child {
+        order: 2;
+    }
+
+    .square-1>div:first-child {
+        order: 1;
+    }
+
+    .square-1,
+    .square-2,
+    .square-3 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .square-1>.img>picture>img,
+    .square-2>.img>picture>img,
+    .img-text>picture>img {
+        width: 49.378vw;
+    }
+
+    .info-text {
+        padding: 100px 100px;
+        display: block;
+        margin: auto;
+        text-align: left;
+    }
+
+    .img-text>div {
+        padding: 0 25%;
+    }
+}

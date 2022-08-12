@@ -1,0 +1,69 @@
+.hero-container{
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero>picture>img {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3em;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+
+.hero-title>h1 {
+    z-index: 1;
+    width: 75%;
+    color: var(--white);
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero-title>.arrow-down {
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 600px) {
+    .hero-container{
+        height: 100vh;
+    }
+    .hero>picture>img {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        -o-object-fit: cover;
+        z-index: 0;
+    }
+
+    .hero-title{
+        top: 175px;
+    }
+
+    .hero-title>h1{
+        font-size: 3em;
+        letter-spacing: 0.2em;
+    }
+}
